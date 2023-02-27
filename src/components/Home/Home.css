@@ -1,12 +1,39 @@
 .home-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   height: 300vh;
   width: 100vw;
   background-color: rgb(219, 219, 219);
+}
+
+.search-button {
+  width: 15%;
+  height: 13%;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  color: black;
+  background-color: white;
+}
+
+.art-location-search {
+  width: 40%;
+  height: 10%;
+}
+
+.search-form {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {

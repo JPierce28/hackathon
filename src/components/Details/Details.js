@@ -1,6 +1,6 @@
 import React from 'react'
 import './Details.css'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import imageObjects from '../../mockData'
 
 const Details = () => {
@@ -15,7 +15,9 @@ const Details = () => {
   return (
     <section className='details-page'>
       <header className='details-header'>
-        <h1>art details</h1>
+        <Link to='/'>
+          <h1>Art Details</h1>
+        </Link>
       </header>
       <div className='details-container'>
         <div>
