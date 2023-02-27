@@ -12,4 +12,18 @@
   width: 80%;
   border: solid 3px black;
   box-shadow: 3px 3px 3px black;
+  overflow-y: scroll;
+  font-family: fantasy;
+  font-size: large;
+}
+.large-image {
+  width: 100%;
+}
+
+.bottom-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-x: wrap;
 }
