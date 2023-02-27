@@ -1,10 +1,13 @@
 import React from 'react'
 import './Home.css'
+import imageObjects from '../../mockData'
 
 const Home = () => {
+  
+
+  
   return (
     <section className='home-page'>
-      <h1>hello</h1>
     </section>
   )
 }
