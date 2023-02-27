@@ -2,13 +2,10 @@ import React from 'react'
 import './Home.css'
 import imageObjects from '../../mockData'
 import ImageCards from '../ImageCards/ImageCards'
+import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
-
-  const artDetails = (newId) => {
-    console.log(newId)
-  }
 
   const evenNumbers = imageObjects.filter(item => {
     return item.id % 2 === 0
@@ -25,7 +22,6 @@ const Home = () => {
         id={card.id}
         artist={card.artist}
         image={card.image}
-        artDetails={artDetails}
       />
     )
   })
@@ -37,7 +33,6 @@ const Home = () => {
         id={card.id}
         artist={card.artist}
         image={card.image}
-        artDetails={artDetails}
       />
     )
   })
