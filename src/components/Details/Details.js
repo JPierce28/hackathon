@@ -1,6 +1,6 @@
 import React from 'react'
 import './Details.css'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import imageObjects from '../../mockData'
 
 const Details = () => {
@@ -10,13 +10,26 @@ const Details = () => {
     return image.id == id
   })
 
+  const currentArtist = currentImage[0]
+
   return (
     <section className='details-page'>
       <header className='details-header'>
-        <h1>art details</h1>
+        <Link to='/'>
+          <h1>Art Details</h1>
+        </Link>
       </header>
       <div className='details-container'>
-        <h1>Container</h1>
+        <div>
+          <img className='large-image' src={currentArtist.image} alt={'Image of art by '+ currentArtist.artist}></img>
+        </div>
+        <div className='bottom-info'>
+          <p>Artist: {currentArtist.artist}</p>
+          <p>Studio Location: {currentArtist.location}</p>
+          <p>Artist WebSite: {currentArtist.socialMedia.artistWebsite}</p>
+          <p>Instagram: {currentArtist.socialMedia.instagram}</p>
+          <p>Twitter: {currentArtist.socialMedia.twitter}</p>
+        </div>
       </div>
     </section>
   )
