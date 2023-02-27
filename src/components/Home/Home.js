@@ -1,25 +1,21 @@
 import React from 'react'
 import './Home.css'
-import imageObjects from '../../mockData'
 import ImageCards from '../ImageCards/ImageCards'
 import { useState } from 'react'
 
-const Home = () => {
+const Home = ({ setArray, currentArray }) => {
   const [searchParams, setSearchParams] = useState('')
-  const [artArray, setArtArray] = useState(imageObjects)
 
-  const evenNumbers = artArray.filter(item => {
+  const filteredArt = !!searchParams ? currentArray.filter(art => art.artist.toLowerCase().includes(searchParams.toLowerCase()) || art.city.toLowerCase().includes(searchParams.toLowerCase())) : currentArray
+
+
+  const evenNumbers = filteredArt.filter(item => {
     return item.id % 2 === 0
   })
 
-  const oddNumbers = artArray.filter(item => {
+  const oddNumbers = filteredArt.filter(item => {
     return item.id % 2 !== 0
   })
-
-  const setSearchFilter = () => {
-    let newSearch = artArray.contains(searchParams)
-    console.log(newSearch)
-  }
 
   const rightImages = evenNumbers.map(card => {
     return (
@@ -51,11 +47,11 @@ const Home = () => {
       <form className='search-form'>
         <input
         className='art-location-search'
+        type='text'
         placeholder='Search by Location or Artist'
         value={searchParams}
-        onChange={setSearchParams}
+        onChange={event => setSearchParams(event.target.value)}
         />
-        <button className='search-button' onClick={setSearchFilter}>Search</button>
       </form>
       <div className='card-container'>
         <div className='card-container-left'>
