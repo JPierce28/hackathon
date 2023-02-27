@@ -1,0 +1,17 @@
+.card {
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.image {
+  height: 80%;
+  width: 80%;
+}
+
+.image:hover {
+  cursor: pointer;
+}
