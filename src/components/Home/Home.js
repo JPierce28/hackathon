@@ -6,6 +6,10 @@ import ImageCards from '../ImageCards/ImageCards'
 
 const Home = () => {
 
+  const artDetails = (newId) => {
+    console.log(newId)
+  }
+
   const evenNumbers = imageObjects.filter(item => {
     return item.id % 2 === 0
   })
@@ -21,6 +25,7 @@ const Home = () => {
         id={card.id}
         artist={card.artist}
         image={card.image}
+        artDetails={artDetails}
       />
     )
   })
@@ -32,6 +37,7 @@ const Home = () => {
         id={card.id}
         artist={card.artist}
         image={card.image}
+        artDetails={artDetails}
       />
     )
   })
@@ -39,7 +45,7 @@ const Home = () => {
   return (
     <section className='home-page'>
       <header className='header'>
-        <h1>This is a Title</h1>
+        <h1>Local Art</h1>
       </header>
       <div className='card-container'>
         <div className='card-container-left'>

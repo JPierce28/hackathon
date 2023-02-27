@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   height: 300vh;
   width: 100vw;
+  background-color: rgb(219, 219, 219);
 }
 
 .header {
@@ -22,9 +23,10 @@
   width: 80%;
   display: flex;
   flex-direction: row;
-  /* overflow-y: scroll; */
-  /* border: solid 3px black;
-  box-shadow: 5px 5px 15px red; */
+  background-color: rgb(238, 238, 238);
+  overflow-y: scroll;
+  border: solid 3px black;
+  box-shadow: 5px 5px 15px rgb(109, 109, 109);
 }
 
 .card-container-left {
